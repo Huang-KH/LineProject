@@ -125,7 +125,7 @@
 						array (
 							"image" => array (
 								"source" => array (
-									"imageUri" => "http://139.59.123.8/chtChatBot/20180109_LineBot/".$objID.".jpeg"
+									"imageUri" => "http://139.59.123.8/chtChatBot/cht_hkh001/".$objID.".jpeg"
 								)
 							),
 							"features" => array (
