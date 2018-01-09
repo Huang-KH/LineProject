@@ -11,10 +11,10 @@
  //產生回傳給line server的格式
  $sender_userid = $json_obj->events[0]->source->userId;
  $sender_txt = $json_obj->events[0]->message->text;
- $sender_replayToken = $json_obj->events[0]->message->replayToken;
+ $sender_replyToken = $json_obj->events[0]->message->replyToken;
  $response = array (
 				//"to" => $sender_userid,
-	 			"replay" => $sender_replayToken,
+	 			"reply" => $sender_replyToken,
 				"messages" => array (
 					array (
 						"type" => "text",
@@ -29,7 +29,7 @@
  $header[] = "Content-Type: application/json";
  $header[] = "Authorization: Bearer Gv/ce02dbXSTWnWwL19/lQpQ7ok4uwgcFg92k/NmeU1bE6IEvRwZpnY3chqbZic3sZontZUXgIwFSt9LXSVNvMunF6Rhor1NAdisXJCgO3QltMkCrujgOPdqy/3GYDPJtBPR9EGHK7OEhEiDNZdCQAdB04t89/1O/w1cDnyilFU=";
  //$ch = curl_init("https://api.line.me/v2/bot/message/push");                                                                      
- $ch = curl_init("https://api.line.me/v2/bot/message/replay");                                                                      
+ $ch = curl_init("https://api.line.me/v2/bot/message/reply");                                                                      
  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
  curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($response));                                                                  
  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
