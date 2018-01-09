@@ -137,7 +137,8 @@
 						)
 					)
 			);
-			$ch = curl_init('https://vision.googleapis.com/v1/images:annotate?key=AIzaSyCiyGiCfjzzPR1JS8PrAxcsQWHdbycVwmg');                                                                      
+			//$ch = curl_init('https://vision.googleapis.com/v1/images:annotate?key=AIzaSyCiyGiCfjzzPR1JS8PrAxcsQWHdbycVwmg');                                                                      
+			$ch = curl_init('https://vision.googleapis.com/v1/images:annotate?key=AIzaSyBzRk_aUpeM7m1rBQ3RH_ZXQHjwp_q2AZA');                                                                      
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
 			curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($post_data));                                                                  
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
