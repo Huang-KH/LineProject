@@ -27,7 +27,7 @@
  fclose($myfile);
  //回傳給line server
  $header[] = "Content-Type: application/json";
- $header[] = "Authorization: Bearer Gv/ce02dbXSTWnWwL19/lQpQ7ok4uwgcFg92k/NmeU1bE6IEvRwZpnY3chqbZic3sZontZUXgIwFSt9LXSVNvMunF6Rhor1NAdisXJCgO3QltMkCrujgOPdqy/3GYDPJtBPR9EGHK7OEhEiDNZdCQAdB04t89/1O/w1cDnyilFU=";
+ $header[] = "Authorization: Bearer 6EYmw4KdaVmfZzfyFuTLbiNoSGvereNnvODaypsR62/h0/Sws49gvmBoEzSq7MMdsZontZUXgIwFSt9LXSVNvMunF6Rhor1NAdisXJCgO3RBAk9P81REOpZrlw8g+QJOxkKkUedSzRUnLGi3jo1f7wdB04t89/1O/w1cDnyilFU=";
  //$ch = curl_init("https://api.line.me/v2/bot/message/push");                                                                      
  $ch = curl_init("https://api.line.me/v2/bot/message/reply");                                                                      
  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
