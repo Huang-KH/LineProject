@@ -105,6 +105,20 @@ $myfile = fopen("log.txt","w+") or die("Unable to open file!"); //設定一個lo
 				)
 			);
         		break;
+		 default:
+			$objID = $json_obj->events[0]->message->id;
+			$url = 'https://api.line.me/v2/bot/message/'.$objID.'/content';
+			$ch = curl_init($url);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+				'Authorization: Bearer 6EYmw4KdaVmfZzfyFuTLbiNoSGvereNnvODaypsR62/h0/Sws49gvmBoEzSq7MMdsZontZUXgIwFSt9LXSVNvMunF6Rhor1NAdisXJCgO3RBAk9P81REOpZrlw8g+QJOxkKkUedSzRUnLGi3jo1f7wdB04t89/1O/w1cDnyilFU=',
+			));
+				
+			$json_content = curl_exec($ch);
+			curl_close($ch);
+			$imagefile = fopen($objID.".jpeg", "w+") or die("Unable to open file!"); //設定一個log.txt，用來印訊息
+			fwrite($imagefile, $json_content); 
+			fclose($imagefile);
  }
  //回傳給line server
  $header[] = "Content-Type: application/json";
